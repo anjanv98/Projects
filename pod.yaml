@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web
+  labels:
+    type: flask
+spec:
+  containers:
+  - name: webbapp
+    image: anjan98/webapp-flask:v1
