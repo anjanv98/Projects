@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  labels:
+    type: flask
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      type: flask
+  template:
+    metadata:
+      labels:
+        type: flask
+    spec:
+      containers:
+      - name: webapp-v2
+        image: anjan98/webapp-flask:v2
+        ports:
+        - containerPort: 80
+  strategy:
+   type: RollingUpdate
+   rollingUpdate:
+     maxUnavailable: 1
