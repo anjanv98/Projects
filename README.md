@@ -19,3 +19,8 @@ Running on Kubernetes
 2) Create a service to expose to the network (Service.yaml)
 3) minikube services web-service (service name) --url (if using minikube)
 4) kubectl get svc web-service and in browser <ext ip:8080> (if in kubernetes)
+
+------------------------------------------------------------------
+Manifest for updating image
+1) create a deployment using deployment-rolling.yaml file
+2) After running the service enter the version at the end to see Version 2 (<ext.ip>:port/version)
