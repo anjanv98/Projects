@@ -23,3 +23,7 @@ spec:
    type: RollingUpdate
    rollingUpdate:
      maxUnavailable: 1
+
+#For Recreate strategy, replace from 22nd line:
+  strategy:
+   type: Recreate
